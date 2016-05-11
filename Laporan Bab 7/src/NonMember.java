@@ -39,4 +39,15 @@ public class NonMember extends Salon {
         hargaProduk = hargaProduk * banyak;
         totalProduk += hargaProduk;
     }
+     public void totalHarga() {
+        double total = totalJasa + totalProduk;
+        System.out.println("=========================================");
+        System.out.println("Nama Pelanggan\t\t: " + super.getNama());
+        System.out.println("Jenis Anggota\t\t: Non Member");
+        System.out.println("Total Harga Jasa\t: Rp. " + totalJasa);
+        System.out.println("Total Harga Produk\t: Rp. " + totalProduk);
+        System.out.println("-----------------------------------------");
+        System.out.println("Harga total + diskon\t: Rp. " + total);
+        System.out.println("=========================================");
+    }
 }
