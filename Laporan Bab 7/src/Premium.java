@@ -8,17 +8,17 @@ public class Premium extends Salon {
         super(nama);
     }
      @Override
-     public void totalJasa(int pil) {
+    public void totalJasa(int pil) {
         if (pil == 1) {
-            double c = super.getCreambath();
+            double c = super.getCreambath() - (super.getCreambath() * 0.2);
             hargaJasa = c;
             super.setCreambath(c);
         } else if (pil == 2) {
-            double p = super.getPotong();
+            double p = super.getPotong() - (super.getPotong() * 0.2);
             hargaJasa = p;
             super.setPotong(p);
         } else if(pil == 3) {
-            double l = super.getLulur();
+            double l = super.getLulur() - (super.getLulur() * 0.2);
             hargaJasa = l;
             super.setLulur(l);
         }
@@ -32,11 +32,11 @@ public class Premium extends Salon {
         } else if (pil == 2) {
             double sb = super.getSabun();
             hargaProduk = sb;
-        } else if(pil == 3){
+        } else if(pil == 3) {
             double m = super.getMasker();
             hargaProduk = m;
         }
         hargaProduk = hargaProduk * banyak;
         totalProduk += hargaProduk;
-    } 
+    }
 }
