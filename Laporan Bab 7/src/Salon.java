@@ -11,5 +11,7 @@ public abstract class Salon {
     public Salon(String nama) {
         this.nama = nama;
     }
+    public abstract void totalJasa(int pil);
+    public abstract void totalProduk(int pil, int banyak);
     
 }
